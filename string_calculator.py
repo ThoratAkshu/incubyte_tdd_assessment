@@ -1,8 +1,6 @@
 def add(numbers):
-    #handle empty string returning 0
     if numbers == "":
         return 0
-    #handle one number
+    numbers = numbers.replace("\n", ",") #handle new lines like commas
     nums = numbers.split(",")
-    #handle two numbers
-    return sum(int(num) for num in nums) 
+    return sum(int(num) for num in nums)
