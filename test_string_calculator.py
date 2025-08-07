@@ -10,3 +10,7 @@ class TestStringCalculator(unittest.TestCase):
     # add test for one number
     def test_one_number(self):
         self.assertEqual(add("1"), 1)
+        
+    # add test for two numbers
+    def test_two_numbers(self):
+        self.assertEqual(add("1,2"), 3)
