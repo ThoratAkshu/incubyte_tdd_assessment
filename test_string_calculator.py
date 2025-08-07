@@ -18,3 +18,7 @@ class TestStringCalculator(unittest.TestCase):
     # add test for new lines between numbers
     def test_new_lines(self):
         self.assertEqual(add("1\n2,3"), 6)
+
+    # add test for custom delimiter
+    def test_custom_delimiter(self):
+        self.assertEqual(add("//;\n1;2"), 3)
