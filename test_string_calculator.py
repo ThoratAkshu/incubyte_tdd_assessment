@@ -14,3 +14,7 @@ class TestStringCalculator(unittest.TestCase):
     # add test for two numbers
     def test_two_numbers(self):
         self.assertEqual(add("1,2"), 3)
+
+    # add test for new lines between numbers
+    def test_new_lines(self):
+        self.assertEqual(add("1\n2,3"), 6)
