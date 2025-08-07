@@ -1,6 +1,11 @@
 def add(numbers):
     if numbers == "":
         return 0
-    numbers = numbers.replace("\n", ",") #handle new lines like commas
-    nums = numbers.split(",")
+    if numbers.startswith("//"):
+        delimiter = numbers[2]
+        numbers = numbers[4:]
+        nums = numbers.split(delimiter) #support custom delimiters
+    else:
+        numbers = numbers.replace("\n", ",")
+        nums = numbers.split(",")
     return sum(int(num) for num in nums)
