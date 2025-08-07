@@ -3,4 +3,6 @@ def add(numbers):
     if numbers == "":
         return 0
     #handle one number
-    return int(numbers)
+    nums = numbers.split(",")
+    #handle two numbers
+    return sum(int(num) for num in nums) 
