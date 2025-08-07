@@ -22,3 +22,9 @@ class TestStringCalculator(unittest.TestCase):
     # add test for custom delimiter
     def test_custom_delimiter(self):
         self.assertEqual(add("//;\n1;2"), 3)
+
+    # add test for negative numbers exception
+    def test_negative_numbers(self):
+        with self.assertRaises(ValueError) as e:
+            add("1,-2,-3")
+        self.assertEqual(str(e.exception), "negative numbers not allowed -2, -3")
